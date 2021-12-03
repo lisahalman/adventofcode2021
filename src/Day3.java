@@ -60,7 +60,7 @@ public class Day3 {
         }
         String CO2Complete = "";
         for (String line : lines) {
-            if (line.contains(CO2short)) {
+            if (line.startsWith(CO2short)) {
                 CO2Complete = line;
                 break;
             }
