@@ -74,27 +74,27 @@ public class Day3 {
     public static void countZerosAndOnes(List<String> lines, int position, StringBuilder prevNumber) {
         int countZeroOxy = 0;
         int countOneOxy = 0;
-            for (String line : lines) {
-                if (line.startsWith(prevNumber.toString())) {
-                    if (line.charAt(position) == '0') {
-                        countZeroOxy++;
-                    } else if (line.charAt(position) == '1') {
-                        countOneOxy++;
-                    }
+        for (String line : lines) {
+            if (line.startsWith(prevNumber.toString())) {
+                if (line.charAt(position) == '0') {
+                    countZeroOxy++;
+                } else if (line.charAt(position) == '1') {
+                    countOneOxy++;
                 }
             }
-            if (countZeroOxy > countOneOxy) {
-                previous.append('0');
-                previousReverse.append('1');
-            } else if (countOneOxy > countZeroOxy) {
-                previous.append('1');
-                previousReverse.append('0');
-            } else {
-                previous.append('1');
-                previousReverse.append('0');
-            }
-            if (countZeroOxy == 1 & countOneOxy == 1) {
-                CO2short = previousReverse.toString();
-            }
+        }
+        if (countZeroOxy > countOneOxy) {
+            previous.append('0');
+            previousReverse.append('1');
+        } else if (countOneOxy > countZeroOxy) {
+            previous.append('1');
+            previousReverse.append('0');
+        } else {
+            previous.append('1');
+            previousReverse.append('0');
+        }
+        if (countZeroOxy == 1 & countOneOxy == 1) {
+            CO2short = previousReverse.toString();
+        }
     }
 }
