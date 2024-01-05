@@ -22,7 +22,7 @@ public class Day1 {
         //second part
         int counter = 0;
         int sumOfThreeNumbers;
-        List<Integer> sums = new ArrayList() ;
+        List<Integer> sums = new ArrayList();
         for (int i = 0; i < (lines.size() - 2); i++) {
             int first = counter;
             int second = counter + 1;
